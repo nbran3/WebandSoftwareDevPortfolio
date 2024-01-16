@@ -23,7 +23,7 @@
             align-items: center;
         }
 
-        .iframe1 {
+        .youtube {
             width: 100vh;
             height: 80vh;
             border: none;
@@ -62,7 +62,7 @@
             font-size: 24px;
         }
 
-        .iframe2 {
+        .weather {
             width: 100vh;
             border: none;
         }
@@ -97,6 +97,22 @@
         .distance p{
             flex-grow:1
         }
+        .map-container {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .BigBenHeader{
+            text-align: center;
+        }
+
+        .map{width: 100vh;
+            border: black;}
     </style>
 </head>
 
@@ -104,7 +120,7 @@
 
 <!-- YouTube iframe -->
 <div class="iframe-container">
-    <iframe class="iframe1" src="https://www.youtube.com/embed/V5ZCLInq_Xw?si=GJQyoHugYgl_MA1c?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe class="youtube" src="https://www.youtube.com/embed/V5ZCLInq_Xw?si=GJQyoHugYgl_MA1c?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <div class ="video-overlay">
         <h1>
             Run for Life
@@ -115,7 +131,7 @@
 
 <!-- Weather iframe -->
 <div class="iframe-container">
-    <iframe class="iframe2" src="https://www.meteoblue.com/en/weather/widget/daily/london_united-kingdom_2643743?geoloc=fixed&days=7&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&precipunit=INCH&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitationprobability=0&spot=0&pressure=0&layout=light" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
+    <iframe class="weather" src="https://www.meteoblue.com/en/weather/widget/daily/london_united-kingdom_2643743?geoloc=fixed&days=7&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&precipunit=INCH&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitationprobability=0&spot=0&pressure=0&layout=light" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
     <!-- DO NOT REMOVE THIS LINK -->
     <div><a href="https://www.meteoblue.com/en/weather/week/london_united-kingdom_2643743?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener">meteoblue</a></div>
 </div>
@@ -164,6 +180,10 @@
             </p>
         </li>
     </ul>
+</div>
+<h2 class="BigBenHeader">See you at Big Ben!</h2>
+<div class="map-container">
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.680381865279!2d-0.12720032303571577!3d51.50073251118999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sBig%20Ben!5e0!3m2!1sen!2sus!4v1705430816621!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </body>
 </html>
