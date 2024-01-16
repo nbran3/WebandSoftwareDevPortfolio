@@ -3,28 +3,99 @@
 <head>
     <meta charset="utf-8">
     <title>Hello, World!</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body{
             margin: 0;
+            font-family: 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif';
             padding: 0;
-            width: 100vw
+            width: 100vw;
         }
         .iframe-container {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            overflow: auto
+            overflow: auto;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .iframe1 {
             width: 100vh;
             height: 80vh;
             border: none;
+
+        }
+        .video-overlay{
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2
+        }
+
+
+        .video-overlay h1 {
+            color: white;
+            font-size: 73px;
+            top: 150px;
+            justify-content: center;
+        }
+
+        .video-overlay h1 {
+            color: white;
+            font-size: 73px;
+            top: 150px;
+            justify-content: center;
+        }
+
+        .video-overlay button{
+            padding: 5px 10px;
+            border: 2px solid white;
+            color: white;
+            background-color: transparent;
+            font-size: 24px;
         }
 
         .iframe2 {
             width: 100vh;
             border: none;
+        }
+
+        .distance-container{
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .distance{
+            list-style: none;
+            display:table;
+            clear:both;
+            margin-bottom: 20px;
+        }
+
+        .distance img{
+            max-width: 100%;
+            float:left;
+            margin-right: 20px;
+        }
+
+        .distance:nth-child(even) img{
+            float:right;
+            margin-right: 0;
+        }
+        .distance-container h2{
+            font-size: 32px;
+        }
+
+        .distance p{
+            flex-grow:1
         }
     </style>
 </head>
@@ -34,6 +105,12 @@
 <!-- YouTube iframe -->
 <div class="iframe-container">
     <iframe class="iframe1" src="https://www.youtube.com/embed/V5ZCLInq_Xw?si=GJQyoHugYgl_MA1c?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class ="video-overlay">
+        <h1>
+            Run for Life
+        </h1>
+        <button type="button">Join us!</button>
+    </div>
 </div>
 
 <!-- Weather iframe -->
