@@ -1,0 +1,40 @@
+body {
+    background-image: url("https://stepik.org/media/attachments/lesson/452681/space.png");
+    margin: 0;
+}
+
+
+.space {
+    background-image: url("https://stepik.org/media/attachments/lesson/452681/space.png");
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+.planet-area {
+    height: 800px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.planet {
+    height: 80%;
+    width: 800px;
+    z-index: 1;
+    top: 200px;
+    position: absolute;
+}
+
+.rocket {
+    height: 250px;
+    width: 200px;
+    transform: rotate(25deg);
+    z-index: 2;
+    position: absolute;
+    left: 400px;
+    top: 300px;
+}
