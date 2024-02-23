@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif';
+            padding: 0;
+            width: 100vw;
+        }
+        .iframe-container {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: auto;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .youtube {
+            width: 100vh;
+            height: 80vh;
+            border: none;
+
+        }
+        .video-overlay{
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2
+        }
+
+
+        .video-overlay h1 {
+            color: white;
+            font-size: 73px;
+            top: 150px;
+            justify-content: center;
+        }
+
+        .video-overlay h1 {
+            color: white;
+            font-size: 73px;
+            top: 150px;
+            justify-content: center;
+        }
+
+        .video-overlay button{
+            padding: 5px 10px;
+            border: 2px solid white;
+            color: white;
+            background-color: transparent;
+            font-size: 24px;
+        }
+
+        .weather {
+            width: 100vh;
+            border: none;
+        }
+
+        .distance-container{
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .distance{
+            list-style: none;
+            display:table;
+            clear:both;
+            margin-bottom: 20px;
+        }
+
+        .distance img{
+            max-width: 100%;
+            float:left;
+            margin-right: 20px;
+        }
+        .distance-image{
+            filter: saturate(100%);
+        }
+        .distance-image:hover{
+            filter:saturate(200%);
+        }
+
+        .distance:nth-child(even) img{
+            float:right;
+            margin-right: 0;
+        }
+        .distance-container h2{
+            font-size: 32px;
+        }
+
+        .distance p{
+            flex-grow:1
+        }
+        .map-container {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .BigBenHeader{
+            text-align: center;
+        }
+
+        .map{width: 100vh;
+            border: black;}
+    </style>
+</head>
+
+<body>
+
+<!-- YouTube iframe -->
+<div class="iframe-container">
+    <iframe class="youtube" src="https://www.youtube.com/embed/V5ZCLInq_Xw?si=GJQyoHugYgl_MA1c?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class ="video-overlay">
+        <h1>
+            Run for Life
+        </h1>
+        <button type="button">Join us!</button>
+    </div>
+</div>
+
+<!-- Weather iframe -->
+<div class="iframe-container">
+    <iframe class="weather" src="https://www.meteoblue.com/en/weather/widget/daily/london_united-kingdom_2643743?geoloc=fixed&days=7&tempunit=FAHRENHEIT&windunit=MILE_PER_HOUR&precipunit=INCH&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitationprobability=0&spot=0&pressure=0&layout=light" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
+    <!-- DO NOT REMOVE THIS LINK -->
+    <div><a href="https://www.meteoblue.com/en/weather/week/london_united-kingdom_2643743?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener">meteoblue</a></div>
+</div>
+
+<div class ="distance-container">
+    <h2>Running Distances</h2>
+    <ul>
+        <li class="distance">
+            <h2>1km: Fun Run</h2>
+            <img class="distance-image" src="https://images.unsplash.com/flagged/photo-1556746834-cbb4a38ee593?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cnVubmVyfGVufDB8fDB8fHww" alt="1km run">
+            <p>
+                This short and sweet 1km run is perfect for beginners or those who just want to have a bit of fun. Whether you're looking to kickstart your fitness journey or simply enjoy a
+                leisurely jog in the great outdoors, this distance is a great way to get started.
+            </p>
+        </li>
+        <li class="distance">
+            <h2>5km Run</h2>
+            <img class="distance-image" src="https://images.unsplash.com/photo-1486218119243-13883505764c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJ1bm5lcnxlbnwwfHwwfHx8MA%3D%3D" alt="5km run">
+            <p>
+                With a distance of 5km, this run is a great challenge for beginner runners or those who want to improve their fitness.
+                Whether you're looking to increase your speed or endurance, this distance will test your limits and help you reach your goals.
+            </p>
+        </li>
+        <li class="distance">
+            <h2>10km Run</h2>
+            <img class="distance-image" src="https://plus.unsplash.com/premium_photo-1674605365723-15e6749630f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cnVubmVyfGVufDB8fDB8fHww" alt="10km run">
+            <p>
+                The 10km run is a great intermediate distance that offers a challenge to runners who have already tackled shorter races. With a mix of speed and endurance,
+                this distance requires a bit more training and dedication, but the sense of accomplishment you'll feel at the finish line will be well worth it.
+            </p>
+        </li>
+        <li class="distance">
+            <h2>21km Run</h2>
+            <img class="distance-image" src="https://images.unsplash.com/photo-1530143311094-34d807799e8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cnVubmVyfGVufDB8fDB8fHww" alt="21km run">
+            <p>
+                The half marathon is a major milestone for runners and requires dedicated training to complete. At a distance of 21km, this run will push you to your limits both physically and mentally,
+                but the feeling of crossing the finish line is an experience like no other.
+            </p>
+        </li>
+        <li class="distance">
+            <h2>42km Run</h2>
+            <img class="distance-image" src="https://images.unsplash.com/photo-1518214598173-1666bc921d66?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cnVubmVyfGVufDB8fDB8fHww" alt="42km run">
+            <p>
+                 The full marathon is the ultimate challenge for runners and requires months of intense training to complete. With a distance of 42km, this run is not for the faint of heart,
+                but for those who are willing to put in the time and effort, the feeling of crossing the finish line is a truly unforgettable experience.
+            </p>
+        </li>
+    </ul>
+</div>
+<h2 class="BigBenHeader">See you at Big Ben!</h2>
+<div class="map-container">
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.680381865279!2d-0.12720032303571577!3d51.50073251118999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sBig%20Ben!5e0!3m2!1sen!2sus!4v1705430816621!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</body>
+</html>
